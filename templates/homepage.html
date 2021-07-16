@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Templates</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          }
+          body {
+          background: url('{{url_for("static", filename="woody.jpg")}}');
+          background-position: center;
+          }
+    </style>
+</head>
+<body>
+<h1>Hi {{name}}. How are you finding Flask sessions?</h1>
+
+{%if name=="Brent":%}
+<p>You are the admin</p>
+{%else%}
+<p>You are a user</p>
+{%endif%}
+
+<br>
+
+<table>
+    <tr>
+        <th>Student_Name</th>
+        <th>Student_Age</th>
+    </tr>
+    <tr>
+        <th>Naeemah</th>
+        <th>25</th>
+    </tr>
+    <tr>
+        <th>Godwin</th>
+        <th>26</th>
+    </tr>
+    <tr>
+        <th>Thapelo</th>
+        <th>47</th>
+    </tr>
+    <tr>
+        <th>Jason</th>
+        <th>23</th>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers Page</title>
+  <style>
+      * {
+      margin: 0;
+      padding: 0;
+      }
+      body {
+      background: url('{{url_for("static", filename="woody.jpg")}}');
+      background-position: center;
+      }
+  </style>
+</head>
+<body>
+  <h1>Times Table:</h1>
+{%for x in range(1, 11): %}
+<p>{{x}} x {{number}} = {{number * x}}</p>
+{%endfor%}
+</body>
+</html>
